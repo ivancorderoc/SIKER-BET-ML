@@ -1,4 +1,4 @@
-# Siker-bet - Plataforma de Apuestas Deportivas
+# Siker-bet - Proyecto Machine Learning
 
 # [Siker-bet](https://sikerbet.fly.dev)🤝
 
