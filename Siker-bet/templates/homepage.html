@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIKER-BET® | Homepage</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .age-confirmation {
+            display: none;
+            position: fixed;
+            top: 68%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 38vh;
+            width: 41.5vw;
+            background-color: #000;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        
+        .age-confirmation.open {
+            display: flex;
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        
+        .age-confirmation h2 {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .age-confirmation p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            text-align: center;
+        }
+        
+        .age-confirmation .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .age-confirmation button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #29753d;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            cursor: pointer;
+            text-shadow: 1px 1px 3px rgb(0, 0, 0);
+        }
+        
+        .age-confirmation button:hover {
+            background-color: #1f5c2a;
+            text-shadow: 1px 1px 3px rgb(0, 0, 0);
+        }
+        
+        dialog[open] {
+            display: flex;
+        }
+        
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.862);
+        }
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+}
+
+        
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="/" class="logo">SIKER-BET®</a>
+
+        <nav class="navbar">
+            <a href="/" class="active">Home</a>
+            <a href="#" id="promoLink">Promo</a>
+            <a href="https://www.linkedin.com/in/ivancorderoc/">Portfolio</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="container">
+            <div class="home-content">
+                <h1>SIKER-BET®</h1>
+                <h3>Trust the process</h3>
+                <p>Siker-bet is a leading company in Europe that provides a unique and responsible experience for sports fans, promoting wholesome fun and ethical values.</p>
+                <div class="btn-box">
+                    <a href="#" class="btn" onclick="showAgeConfirmation(event)">PROMO</a>
+                    <a href="/about">About</a>
+                </div>
+            </div>
+        </div>
+        <div class="home-sci">
+            <a href="https://github.com/ivancorderoc"><i class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/ivancorderoc/"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+        <span class="home-imgHover"></span>
+    </section>
+
+    <dialog id="ageConfirmationDialog" class="age-confirmation">
+        <h2>Confirm Your Age</h2>
+        <p>You must be over 18 years old to access this site.</p>
+        <div class="button-container">
+            <button onclick="confirmAge()">Yes</button>
+            <button onclick="cancelAgeConfirmation()">No</button>
+        </div>
+    </dialog>
+
+    <script src="/static/js/script-box.js"></script>
+    
+
+</body> 
+
+</html>
