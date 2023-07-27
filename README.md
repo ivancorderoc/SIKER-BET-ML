@@ -1,6 +1,11 @@
 # Siker-bet - Plataforma de Apuestas Deportivas
 
-![Siker-bet](https://sikerbet.fly.dev)
+# [Siker-bet](https://sikerbet.fly.dev)
+
+> _"Tu camino hacia el éxito en las apuestas deportivas en América"_
+
+Siker-bet es una empresa innovadora que lleva la emoción de los deportes estadounidenses, incluyendo NHL, NFL, NBA y MLB, a Europa. Nuestra plataforma tiene como objetivo aprovechar el creciente interés en estos deportes y ofrece una experiencia única
+
 
 
 > _"Tu camino hacia el éxito en las apuestas deportivas"_
