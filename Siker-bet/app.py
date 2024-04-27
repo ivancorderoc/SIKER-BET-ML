@@ -1,15 +1,23 @@
 from flask import Flask, render_template, request
 import numpy as np
 import pickle
+import os
 
 app = Flask(__name__)
-root_path = "../Siker-bet/model/"
+root_path = os.path.join(os.path.dirname(__file__), "model")
 # Funcionn para cargar el modelo y el encoder desde los archivos pickle
 def load_model_and_encoder():
-    model = pickle.load(open(root_path + "model.pkl", "rb"))
-    encoder = pickle.load(open(root_path + "label_model.pkl", "rb"))
+    model_path = os.path.join(root_path, "model.pkl")
+    encoder_path = os.path.join(root_path, "label_model.pkl")
+    
+    # Carga el modelo y el encoder usando pickle
+    with open(model_path, 'rb') as model_file:
+        model = pickle.load(model_file)
+    
+    with open(encoder_path, 'rb') as encoder_file:
+        encoder = pickle.load(encoder_file)
+    
     return model, encoder
-
 @app.route("/")
 def home():
     return render_template("homepage.html")
@@ -57,4 +65,4 @@ def error():
     return render_template("error.html")
 
 if __name__ == "__main__":
-    app.run(port=8000)
+    app.run(host="0.0.0.0", port=8000)
