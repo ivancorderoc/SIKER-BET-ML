@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for sikerbet on 2024-04-27T18:36:56+02:00
+# fly.toml app configuration file generated for sikerbet on 2024-04-27T19:55:54+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -17,6 +17,7 @@ primary_region = 'mad'
   processes = ['app']
 
 [[vm]]
+  size = 'shared-cpu-1x'
   memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
