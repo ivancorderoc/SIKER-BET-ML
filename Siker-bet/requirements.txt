@@ -1,4 +1,4 @@
 Flask==3.0.3
 numpy==1.26.4
+pandas==2.2.2
 catboost==1.2.5
-pandas==2.2.2   # Solo si tu modelo requiere pandas para input
